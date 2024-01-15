@@ -1,102 +1,126 @@
-import React from 'react';
-import logo from "../Images/logo.png";
-import logotext1 from "../Images/logotext1.png";
+import React from "react";
 import { Link } from "react-router-dom";
-import { IoIosArrowRoundForward } from "react-icons/io";
-import { BsMap } from "react-icons/bs";
-import { LuPhone } from "react-icons/lu";
-import { AiOutlineMail } from "react-icons/ai";
-import { AiFillCaretDown } from "react-icons/ai";
-// import { Link } from 'react-router-dom';
-import { FaPhone } from 'react-icons/fa';
-const Footer = () => {
+import logo from "../Images/logo.png";
+import logotext from "../Images/logotext1.png";
+import DownArrow from "../Images/DownArrow.svg";
+import Playstore from "../Images/playstore.png";
+import AppleIcon from "../Images/Appleicon.png"
+
+export default function Footer() {
   return (
-    <>
-    <div className='bg-[#0B0B0B] min-h-screen text-white'>
+    <div className="bg-[#0B0B0B] px-5 sm:px-10 md:px-14 lg:px-20 xl:px-24 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 lg:gap-20 xl:gap-32">
+        <div className="md:col-span-4 md:pt-10">
+          <Link to="/" className="flex items-center">
+            <img className="w-25 h-10 cursor-pointer pr-4" src={logo} alt="" />
+            <img className="w-15 h-5 cursor-pointer" src={logotext} alt="" />
+          </Link>
 
-         <div className="flex justify-between items-center p-4">
-        <Link to="/" className="flex items-center text-white mt-20">
-          <img className=" cursor-pointer" src={logo} alt="Logo"  />
-          <img className=" cursor-pointer ml-2" src={logotext1} alt="Logotext" />
-          <hr className="my-5 w-full text-white" />
-        </Link>
-       
-      </div>
-        <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 mx-20 sm:mx-20 md:mx-20 lg:mx-28 '>
-        <div >
-     
-      <div className="flex items-center">
-      <BsMap className='w-4 h-4 mt-1 mr-2'/><h4 className=" ">Address Line 1,</h4>
-      </div>
-        <h4 className='ml-6'>Address Line 2,</h4>
-        <h4 className='ml-6'>District, State,</h4>
-        <h4 className='ml-6'>Country, ZipCode</h4>
-        <div className="flex items-center">
-      <LuPhone className='w-4 h-4 mt-1 mr-1' />
-      <h4>
-        <Link to="tel:+911234567890">+91 12345-67890</Link>
-      </h4>
-    </div>
-    <div className="flex items-center">
-      <AiOutlineMail className='w-4 h-4 mt-1 mr-2' />
-      <h4>
-        <Link to="mailto:mail@email.com">mail@email.com</Link>
-      </h4>
-    </div>
-        <div className="flex items-center mt-10">
-      <h4 className=" mr-2">See Details</h4>
-      <IoIosArrowRoundForward className='w-8 h-8 mt-1' />
-    </div>
-      </div>
-      <div >
-      <div className="flex items-center">
-        <h3>Services</h3><AiFillCaretDown />
+          <div className="border-b border-[#9E9E9E] mt-5 md:mt-10"></div>
+
+         <div className="mt-5 md:mt-8">
+         <button
+            type="submit"
+            className="border border-[#9E9E9E] px-5 py-3 rounded-[8px]"
+          >
+            <div className="flex">
+              <div className="flex justify-center items-center"><img src={Playstore} alt="" className="h-5 w-5" />
+              </div>
+              <div className="pl-3">
+                <h1 className="text-[8px] text-[#9E9E9E] text-left">Get It On</h1>
+                <h1 className="text-sm text-white text-semibold">Google Play</h1>
+              </div>
+            </div>
+            
+          </button>
+         </div>
+
+
+         <div className="mt-5">
+         <button
+            type="submit"
+            className="border border-[#9E9E9E] px-6 py-3 rounded-[8px]"
+          >
+            <div className="flex">
+              <div className="flex justify-center items-center"><img src={AppleIcon} alt="" className="h-6 w-6" />
+              </div>
+              <div className="pl-3">
+                <h1 className="text-[8px] text-[#9E9E9E]">Download On The</h1>
+                <h1 className="text-sm text-white text-semibold">App Store</h1>
+              </div>
+            </div>
+            
+          </button>
+         </div>
         </div>
-        <p>Help & Support</p>
-        <p>FAQs</p>
-        <p>House Selection</p>
-      </div>
-      <div >
-     
-        <div className="flex items-center">
-        <h3>Important Links</h3><AiFillCaretDown />
-        </div>
-        <Link to="/">Home</Link><br/>
-      <Link to="/HowitWorks">How It Works?</Link><br/>
-      <Link to="/SwappingPlace">Swapping Places</Link><br/>
-      <Link to="/Notifications">Notifications</Link><br/>
-      <Link to="/terms-and-conditions">Terms & Condition</Link><br/>
-      <Link to="/help-and-support">Help & Support</Link><br/>
-      <Link to="/privacy-policy">Privacy Policy</Link><br/>
-      <Link to="/Career">Career</Link><br/>
-      <Link to="/About">About</Link><br/>
-      <Link to="/Login">Login/Register</Link><br/>
-        </div>
-     
-      <div >
-      <div className="flex items-center">
-        <h3>Social Media</h3><AiFillCaretDown />
-        </div>
-        <Link to="/instagram">Instagram</Link><br/>
-        <Link to="/twitter">Twitter(X)</Link><br/>
-      <Link to="/facebook">Facebook</Link><br/>
-      <Link to="/linkedin">LinkedIn</Link><br/>
-      <Link to="/reddit">Reddit</Link>
-      </div>
-      </div>
-     
-      <div>
-            <p className="footer-paragraph text-white mt-28 text-center">
-            Copyright © 2023 Turn Keys. All Rights Reserved:
-              {/* <Link href="#" className="footer-text">
-                <strong> Gravitonweb Technologies</strong>
-              </Link> */}
-            </p>
+
+        <div className="md:col-span-2 ">
+          <div className="flex">
+            <div>
+              <h1 className="text-white  text-xl font-regular">Services</h1>
+            </div>
+            <div className="">
+              <img src={DownArrow} alt="" className="mt-3 pl-2" />
+            </div>
           </div>
-    </div>
-     
-    </>
-  );
-};
 
-export default Footer;
+          <ul className="text-[#9E9E9E] text-sm mt-5">
+            <li>Help & Support</li>
+            <li className="mt-2">FAQs</li>
+            <li className="mt-2">House Selection</li>
+          </ul>
+        </div>
+
+        <div className="md:col-span-3 ">
+          <div className="flex">
+            <div>
+              <h1 className="text-white  text-xl font-regular">
+                Important Links
+              </h1>
+            </div>
+            <div className="">
+              <img src={DownArrow} alt="" className="mt-3 pl-2" />
+            </div>
+          </div>
+
+          <ul className="text-[#9E9E9E] text-sm mt-5">
+            <li>Help & Support</li>
+            <li className="mt-2">Hom</li>
+            <li className="mt-2">How It Works?</li>
+            <li className="mt-2">Swapping Places</li>
+            <li className="mt-2">Notifications</li>
+            <li className="mt-2">Terms & Conditions</li>
+            <li className="mt-2">Help & Support</li>
+            <li className="mt-2">Privacy Policy</li>
+            <li className="mt-2">About</li>
+            <li className="mt-2">Career</li>
+            <li className="mt-2 font-bold">Login/Register</li>
+          </ul>
+        </div>
+
+        <div className="md:col-span-3 ">
+          <div className="flex">
+            <div>
+              <h1 className="text-white  text-xl font-regular">Social Media</h1>
+            </div>
+            <div className="">
+              <img src={DownArrow} alt="" className="mt-3 pl-2" />
+            </div>
+          </div>
+
+          <ul className="text-[#9E9E9E] text-sm mt-5">
+            <li>Instragram</li>
+            <li className="mt-2">Twitter(X)</li>
+            <li className="mt-2">Facebook</li>
+            <li className="mt-2">Linkedin</li>
+            <li className="mt-2">Reddit</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mt-5 md:mt-8 flex justify-center">
+          <h1 className="text-white text-sm font-bold">Copyright &copy; 2023 Turn Keys. All Right Reserved</h1>
+      </div>
+    </div>
+  );
+}

@@ -1,9 +1,0 @@
-.about-banner-section {
-    background-image: url("./ServicesImages/srvicesbanner.png");
-    background-attachment: fixed;
-    height: 80vh;
-    background-position: center right; /* Center horizontally, shift to the right vertically */
-    background-size: cover;
-    border-radius: 20px; 
-}
-

@@ -1,0 +1,18 @@
+.events {
+    overflow: auto;
+    max-height: 90vh;
+    min-height: 90vh;
+  }
+  
+  .events::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  .events::-webkit-scrollbar-thumb {
+    background-color:rgb(223, 220, 220);
+  }
+  
+  .events::-webkit-scrollbar-track {
+    background-color: #eee;
+  }
+  

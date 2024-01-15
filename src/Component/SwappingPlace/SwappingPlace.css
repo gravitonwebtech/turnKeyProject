@@ -1,0 +1,18 @@
+@media only screen and (max-width: 768px) {
+  .swapping-banner-section {
+    background-image: url("./SwappingImgs/SwappingBanner.png");
+    height: 850px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+  }
+}
+
+#calendarIn::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Invert the color to make it white */
+}
+
+#calendarOut::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Invert the color to make it white */
+}

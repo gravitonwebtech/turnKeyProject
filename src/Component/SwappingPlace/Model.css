@@ -1,0 +1,21 @@
+.events {
+    overflow: auto;
+    max-height: 550px;
+    min-height: 550px;
+  }
+  
+  .events::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .events::-webkit-scrollbar-thumb {
+    background-color: #dad7d7;
+    cursor: pointer;
+  }
+  
+  .events::-webkit-scrollbar-track {
+    background-color: #eee;
+  }
+
+  
+  

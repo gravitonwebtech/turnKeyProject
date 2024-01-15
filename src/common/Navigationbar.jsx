@@ -50,14 +50,14 @@ const NavigationBar = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50  ${
           isScrolled
-            ? "bg-white text-black shadow-b-lg px-5 py-2 sm:px-10 sm:py-2 md:px-20 md:py-2"
-            : "bg-white text-black px-5 py-2  md:px-10 md:py-5 lg:px-20 lg:py-5"
+            ? "bg-white text-black shadow-b-lg px-5 py-2 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+            : "bg-white border-b border-gray-200 text-black px-5 py-2 sm:px-10 md:px-14 lg:px-20 xl:px-24"
         }`}
       >
         <Scrollup />
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center"style={{ fontFamily: "Poppins" }}>
           <Link to="/" className="flex items-center">
-            <img className="w-25 h-10 cursor-pointer" src={logo} alt="" />
+            <img className="w-25 h-10 cursor-pointer pr-4" src={logo} alt="" />
             <img className="w-15 h-5 cursor-pointer" src={logotext} alt="" />
           </Link>
 
@@ -130,7 +130,7 @@ const NavigationBar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/SwappingPlace"
+                    to="/SwappingMain"
                     className="text-black-500"
                     onClick={() => setIsDrawerOpen(false)}
                   >
@@ -168,8 +168,8 @@ const NavigationBar = () => {
                 </li>
               </ul>
 
-              <div className="mt-4">
-                <div className="p-4 relative flex items-center flex-col">
+              <div className="mt-5">
+                <div className="">
                   <Link
                     to="/Login"
                     className="rounded-[4px] px-5 py-2 font-semibold  bg-[#09A350] text-white"
@@ -206,7 +206,7 @@ const NavigationBar = () => {
             </li>
             <li>
               <Link
-                to="/SwappingPlace"
+                to="/SwappingMain"
                 className="text-black-500"
                 onClick={() => setIsDrawerOpen(false)}
               >

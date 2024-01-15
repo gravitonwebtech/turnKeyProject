@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Baumans&family=Patua+One&family=Poppins&family=Volkhov&display=swap");
+.home-bg-section {
+  background-image: url("../HomeImgs/Hero\ Section.png");
+  background-attachment: fixed;
+  height: 100vh;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .home-bg-section {
+    height: auto;
+  }
+}
+
+.home-second-section {
+  background-image: url("../HomeImgs/Hero\ Section2.png");
+  height: auto;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-six-section {
+  background-image: url("../HomeImgs/Six\ Section.png");
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:80vh;
+  width: 100%;
+}
