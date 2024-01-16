@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Baumans&family=Patua+One&family=Poppins&family=Volkhov&display=swap");
+.hero-section-banner {
+  background-image: url("./HowItWokImgs/Hero\ Section.png");
+  height:70vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.five-section {
+  background-image: url("./HowItWokImgs//Section\ 5.png");
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:70vh;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .five-section {
+    height: auto;
+    padding-bottom: 20px;
+  }
+}

@@ -29,7 +29,7 @@ export default function FiveSection() {
     <>
       <div className="mt-10 md:mt-14 " style={{ fontFamily: "Poppins" }}>
         <div className="text-center">
-          <span className="text-xs bg-[#E9E9E9] px-10 py-1">Testimonials</span>
+          <span className="text-xs bg-[#E9E9E9] px-10 py-1 rounded">Testimonials</span>
         </div>
 
         <div className="mt-5 hidden sm:block text-center">
@@ -39,7 +39,6 @@ export default function FiveSection() {
             </div>
             <div
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-regular"
-              style={{ fontFamily: "Poppins" }}
             >
               <h1>What Our Happy</h1>
               <h1 className="mt-2">Customers Said.</h1>
@@ -53,7 +52,6 @@ export default function FiveSection() {
         <div className="block sm:hidden">
           <div
             className="mt-5 text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-regular"
-            style={{ fontFamily: "Poppins" }}
           >
             <h1>What Our Happy</h1>
             <h1 className="mt-2">Customers Said.</h1>

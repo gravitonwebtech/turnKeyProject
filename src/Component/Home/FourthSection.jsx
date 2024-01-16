@@ -62,7 +62,7 @@ export default function FourthSection() {
           <p className="text-[#888888] text-md font-regular text-center px-10 mt-3">
             Our easy registration and identity verification process get you
             started in no time. Create your profile, add stunning photos, and
-            begin exploring potential swaps effortlessly
+            begin exploring potential swaps effortlessly.
           </p>
         </div>
       </div>

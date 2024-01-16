@@ -10,7 +10,7 @@ export default function ThirdSection() {
     <>
       <div className="mt-10 md:mt-14 " style={{ fontFamily: "Poppins" }}>
         <div className="text-center">
-          <span className="text-xs bg-[#E9E9E9] px-10 py-1">
+          <span className="text-xs bg-[#E9E9E9] px-10 py-1 rounded">
             The Secret to Home Exchanging
           </span>
         </div>

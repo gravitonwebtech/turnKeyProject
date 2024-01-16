@@ -5,7 +5,7 @@ export default function SixSection() {
   return (
     <div className="mt-10  md:mt-14 home-six-section">
       <div className="text-center py-10 md:py-14">
-        <span className="text-xs text-white bg-[#333333] px-10 py-1">
+        <span className="text-xs text-white bg-[#333333] px-10 py-1 rounded">
          Smarter Way to Exchange Houses
         </span>
 

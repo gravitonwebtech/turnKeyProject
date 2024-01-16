@@ -5,6 +5,8 @@ import Home from "./Component/Home/Home";
 import Header from "./common/Header";
 import SwappingPlace from "./Component/SwappingPlace/SwappingPlace";
 import SwappingMain from "./Component/SwappingPlace/SwappingMain";
+import HowItWork from "./Component/HowItWork/HowItWork";
+import Notification from "./Component/Notification/Notification";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Routes>
           <Route index path="/" element={<Home />} />
           <Route index path="/SwappingMain" element={<SwappingMain/>} />
+          <Route index path="/HowItWork" element={<HowItWork/>} />
+          <Route index path="/Notification" element={<Notification/>} />
 
         </Routes>
 

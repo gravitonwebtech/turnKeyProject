@@ -121,7 +121,7 @@ const NavigationBar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/HowitWorks"
+                    to="/HowItWork"
                     className="text-black-500"
                     onClick={() => setIsDrawerOpen(false)}
                   >
@@ -197,7 +197,7 @@ const NavigationBar = () => {
 
             <li>
               <Link
-                to="/HowitWorks"
+                to="/HowItWork"
                 className="text-black-500"
                 onClick={() => closeDropdowns()}
               >
