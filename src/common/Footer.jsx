@@ -4,7 +4,7 @@ import logo from "../Images/logo.png";
 import logotext from "../Images/logotext1.png";
 import DownArrow from "../Images/DownArrow.svg";
 import Playstore from "../Images/playstore.png";
-import AppleIcon from "../Images/Appleicon.png"
+import AppleIcon from "../Images/Appleicon.png";
 
 export default function Footer() {
   return (
@@ -18,40 +18,45 @@ export default function Footer() {
 
           <div className="border-b border-[#9E9E9E] mt-5 md:mt-10"></div>
 
-         <div className="mt-5 md:mt-8">
-         <button
-            type="submit"
-            className="border border-[#9E9E9E] px-5 py-3 rounded-[8px]"
-          >
-            <div className="flex">
-              <div className="flex justify-center items-center"><img src={Playstore} alt="" className="h-5 w-5" />
+          <div className="mt-5 md:mt-8">
+            <button
+              type="submit"
+              className="border border-[#9E9E9E] px-5 py-3 rounded-[8px]"
+            >
+              <div className="flex">
+                <div className="flex justify-center items-center">
+                  <img src={Playstore} alt="" className="h-5 w-5" />
+                </div>
+                <div className="pl-3">
+                  <h1 className="text-[8px] text-[#9E9E9E] text-left">
+                    Get It On
+                  </h1>
+                  <h1 className="text-sm text-white text-semibold">
+                    Google Play
+                  </h1>
+                </div>
               </div>
-              <div className="pl-3">
-                <h1 className="text-[8px] text-[#9E9E9E] text-left">Get It On</h1>
-                <h1 className="text-sm text-white text-semibold">Google Play</h1>
-              </div>
-            </div>
-            
-          </button>
-         </div>
+            </button>
+          </div>
 
-
-         <div className="mt-5">
-         <button
-            type="submit"
-            className="border border-[#9E9E9E] px-6 py-3 rounded-[8px]"
-          >
-            <div className="flex">
-              <div className="flex justify-center items-center"><img src={AppleIcon} alt="" className="h-6 w-6" />
+          <div className="mt-5">
+            <button
+              type="submit"
+              className="border border-[#9E9E9E] px-6 py-3 rounded-[8px]"
+            >
+              <div className="flex">
+                <div className="flex justify-center items-center">
+                  <img src={AppleIcon} alt="" className="h-6 w-6" />
+                </div>
+                <div className="pl-3">
+                  <h1 className="text-[8px] text-[#9E9E9E]">Download On The</h1>
+                  <h1 className="text-sm text-white text-semibold">
+                    App Store
+                  </h1>
+                </div>
               </div>
-              <div className="pl-3">
-                <h1 className="text-[8px] text-[#9E9E9E]">Download On The</h1>
-                <h1 className="text-sm text-white text-semibold">App Store</h1>
-              </div>
-            </div>
-            
-          </button>
-         </div>
+            </button>
+          </div>
         </div>
 
         <div className="md:col-span-2 ">
@@ -84,11 +89,18 @@ export default function Footer() {
           </div>
 
           <ul className="text-[#9E9E9E] text-sm mt-5">
-            <li>Help & Support</li>
-            <li className="mt-2">Hom</li>
-            <li className="mt-2">How It Works?</li>
-            <li className="mt-2">Swapping Places</li>
-            <li className="mt-2">Notifications</li>
+            <Link to="/">
+              <li className="">Home</li>
+            </Link>
+            <Link to="/HowItWork">
+              <li className="mt-2">How It Works?</li>
+            </Link>
+            <Link to="/SwappingMain">
+              <li className="mt-2">Swapping Places</li>
+            </Link>
+            <Link to="/Notification">
+              <li className="mt-2">Notifications</li>
+            </Link>
             <li className="mt-2">Terms & Conditions</li>
             <li className="mt-2">Help & Support</li>
             <li className="mt-2">Privacy Policy</li>
@@ -119,7 +131,9 @@ export default function Footer() {
       </div>
 
       <div className="mt-5 md:mt-8 flex justify-center">
-          <h1 className="text-white text-sm font-bold">Copyright &copy; 2023 Turn Keys. All Right Reserved</h1>
+        <h1 className="text-white text-sm font-bold">
+          Copyright &copy; 2023 Turn Keys. All Right Reserved
+        </h1>
       </div>
     </div>
   );

@@ -41,7 +41,7 @@ export default function HeroSection() {
     <>
       <div className="home-bg-section">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5  px-5 sm:px-10 md:px-14 lg:px-20 xl:px-24">
-          <div className="pt-40">
+          <div className="pt-16 md:pt-28 lg:pt-36">
             <h1
               className="text-4xl md:text-4xl lg:text-5xl xl:text-7xl"
               style={{ fontFamily: "Baumans" }}
@@ -122,7 +122,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="relative pt-5 md:pt-32 xl:pt-24 flex justify-end">
+          <div className="relative pt-5 md:pt-24 xl:pt-20 flex justify-end">
             <img src={BannerImg} alt="" className="xl:w-[90%]" />
             {buttons.map((buttonContent, index) => (
               <button

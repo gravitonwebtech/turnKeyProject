@@ -3,7 +3,7 @@ import "./HowItWork.css"
 
 export default function HeroSection() {
   return (
-    <div className='mt-14 hero-section-banner flex items-center justify-center text-center'>
+    <div className='hero-section-banner flex items-center justify-center text-center'>
       <div>
         <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white' style={{ fontFamily: "Baumans" }}>
           <span className='text-[#57FFA5]'>Turn Keys</span>: How does it work?

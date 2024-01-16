@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Baumans&family=Patua+One&family=Poppins&family=Volkhov&display=swap");
 .home-bg-section {
   background-image: url("../HomeImgs/Hero\ Section.png");
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   height: 100vh;
-  background-position: left;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
 }

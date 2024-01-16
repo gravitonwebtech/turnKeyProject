@@ -39,23 +39,20 @@ const NavigationBar = () => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  window.addEventListener("scroll", function () {
-    const firstButton = document.querySelector(".first-dropdown-button");
-    const secondButton = document.querySelector(".second-dropdown-button");
-    const thirdButton = document.querySelector(".third-dropdown-button");
-  });
-
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50  ${
+        className={`top-0 left-0 right-0 z-50 ${
           isScrolled
-            ? "bg-white text-black shadow-b-lg px-5 py-2 sm:px-10 md:px-14 lg:px-20 xl:px-24"
-            : "bg-white border-b border-gray-200 text-black px-5 py-2 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+            ? "fixed bg-white text-black shadow-b-lg px-5 py-3 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+            : "bg-white border-b border-gray-200 text-black px-5 py-3 sm:px-10 md:px-14 lg:px-20 xl:px-24"
         }`}
       >
         <Scrollup />
-        <div className="flex justify-between items-center"style={{ fontFamily: "Poppins" }}>
+        <div
+          className="flex justify-between items-center"
+          style={{ fontFamily: "Poppins" }}
+        >
           <Link to="/" className="flex items-center">
             <img className="w-25 h-10 cursor-pointer pr-4" src={logo} alt="" />
             <img className="w-15 h-5 cursor-pointer" src={logotext} alt="" />

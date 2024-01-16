@@ -51,7 +51,7 @@ export default function SwappingPlace() {
   };
 
   return (
-    <div className="relative mt-14 bg-[#CFF3D9] py-10 md:py-16 px-5 sm:px-10 md:px-20 lg:px-28">
+    <div className="relative bg-[#CFF3D9] py-10 md:py-16 px-5 sm:px-10 md:px-20 lg:px-28">
       <div className="relative swapping-banner-section">
         <img
           src={Banner}
