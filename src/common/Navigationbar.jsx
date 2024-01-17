@@ -85,9 +85,9 @@ const NavigationBar = () => {
           {/* Drawer */}
 
           {isDrawerOpen && (
-            <div className="lg:hidden absolute top-0 right-0 h-screen w-64 bg-blue-300 text-white p-4 shadow-md">
+            <div className="lg:hidden absolute top-0 right-0 h-screen w-full bg-white  p-4 shadow-md z-50">
               <button
-                className="text-white p-2 focus:outline-none absolute top-2 right-2"
+                className="text-black p-2 focus:outline-none absolute top-2 right-2"
                 onClick={() => setIsDrawerOpen(false)}
               >
                 <svg
@@ -106,7 +106,7 @@ const NavigationBar = () => {
                 </svg>
               </button>
 
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 <li>
                   <Link
                     to="/"
@@ -154,15 +154,6 @@ const NavigationBar = () => {
                   </Link>
                 </li>
 
-                <li>
-                  <Link
-                    to="/Swappingoptionpage"
-                    className="text-black-500"
-                    onClick={() => setIsDrawerOpen(false)}
-                  >
-                    Swapping option page
-                  </Link>
-                </li>
               </ul>
 
               <div className="mt-5">
