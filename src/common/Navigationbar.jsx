@@ -45,7 +45,7 @@ const NavigationBar = () => {
         className={`top-0 left-0 right-0 z-50 ${
           isScrolled
             ? "fixed bg-white text-black shadow-b-lg px-5 py-3 sm:px-10 md:px-14 lg:px-20 xl:px-24"
-            : "bg-white border-b border-gray-200 text-black px-5 py-3 sm:px-10 md:px-14 lg:px-20 xl:px-24"
+            : "bg-white  text-black px-5 py-3 sm:px-10 md:px-14 lg:px-20 xl:px-24"
         }`}
       >
         <Scrollup />
