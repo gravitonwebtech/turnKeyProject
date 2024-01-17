@@ -41,7 +41,7 @@ export default function HeroSection() {
     <>
       <div className="home-bg-section">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5  px-5 sm:px-10 md:px-14 lg:px-20 xl:px-24">
-          <div className="pt-16 md:pt-28 lg:pt-36">
+          <div className="pt-16 md:pt-28 lg:pt-32">
             <h1
               className="text-4xl md:text-4xl lg:text-5xl xl:text-7xl"
               style={{ fontFamily: "Baumans" }}

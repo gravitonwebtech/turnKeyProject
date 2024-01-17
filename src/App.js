@@ -6,6 +6,7 @@ import Header from "./common/Header";
 import SwappingMain from "./Component/SwappingPlace/SwappingMain";
 import HowItWork from "./Component/HowItWork/HowItWork";
 import Notification from "./Component/Notification/Notification";
+import RegisterLogin from "./Component/Register/RegisterLogin";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route index path="/SwappingMain" element={<SwappingMain />} />
           <Route index path="/HowItWork" element={<HowItWork />} />
           <Route index path="/Notification" element={<Notification />} />
+          <Route index path="/RegisterLogin" element={<RegisterLogin />} />
         </Routes>
 
         <Footer />

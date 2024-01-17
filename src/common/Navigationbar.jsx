@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../Images/logo.png";
 import logotext from "../Images/logotext.png";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import Scrollup from "../Scrollup";
 
 const NavigationBar = () => {
@@ -9,7 +9,6 @@ const NavigationBar = () => {
   const [isBusinessOpen, setIsBusinessOpen] = useState(false);
   const [isTrainingOpen, setIsTrainingOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const navigate = useNavigate();
   const location = useLocation();
 
   const closeDropdowns = () => {
@@ -33,13 +32,23 @@ const NavigationBar = () => {
     };
   }, []);
 
-  useEffect(() => {
-    // Scroll to the top when the route changes
 
+
+  // Scroll to the top when the route changes
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  return (
+
+  // hide navbar in register page
+  const location1 = useLocation();
+  const flag = location1?.pathname?.includes("/RegisterLogin");
+
+  if (flag) {
+    return <></>;
+  } else {
+    
+    return (
     <>
       <nav
         className={`top-0 left-0 right-0 z-50 ${
@@ -153,13 +162,12 @@ const NavigationBar = () => {
                     About
                   </Link>
                 </li>
-
               </ul>
 
               <div className="mt-5">
                 <div className="">
                   <Link
-                    to="/Login"
+                    to="/RegisterLogin"
                     className="rounded-[4px] px-5 py-2 font-semibold  bg-[#09A350] text-white"
                     onClick={() => closeDropdowns()}
                   >
@@ -232,7 +240,7 @@ const NavigationBar = () => {
 
           <div className="hidden lg:flex justify-center text-white ">
             <Link
-              to="/Login"
+              to="/RegisterLogin"
               className="rounded-[4px] px-5 py-2 font-semibold  bg-[#09A350] text-white"
               onClick={() => closeDropdowns()}
             >
@@ -243,6 +251,7 @@ const NavigationBar = () => {
       </nav>
     </>
   );
+  }
 };
 
 export default NavigationBar;

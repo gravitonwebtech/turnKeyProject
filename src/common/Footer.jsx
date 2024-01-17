@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../Images/logo.png";
 import logotext from "../Images/logotext1.png";
 import DownArrow from "../Images/DownArrow.svg";
@@ -7,6 +7,12 @@ import Playstore from "../Images/playstore.png";
 import AppleIcon from "../Images/Appleicon.png";
 
 export default function Footer() {
+  const location = useLocation();
+  const flag = location?.pathname?.includes("/RegisterLogin");
+
+  if (flag) {
+    return <></>;
+  } else {
   return (
     <div className="bg-[#0B0B0B] px-5 sm:px-10 md:px-14 lg:px-20 xl:px-24 py-10">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-10 lg:gap-20 xl:gap-32">
@@ -137,4 +143,5 @@ export default function Footer() {
       </div>
     </div>
   );
+  }
 }

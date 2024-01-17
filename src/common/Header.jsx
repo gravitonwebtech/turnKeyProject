@@ -1,8 +1,15 @@
 import React from "react";
 import Phone from "../Images/Phone.svg";
 import Email from "../Images/Email.svg";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
+  const location1 = useLocation();
+  const flag = location1?.pathname?.includes("/RegisterLogin");
+
+  if (flag) {
+    return <></>;
+  } else {
   return (
     <div className="bg-[#EDEDED] hidden lg:block px-5 py-2 sm:px-10 md:px-14 lg:px-20 xl:px-24">
       <div
@@ -31,4 +38,5 @@ export default function Header() {
       </div>
     </div>
   );
+  }
 }
