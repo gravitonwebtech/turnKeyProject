@@ -10,19 +10,19 @@ export default function FiveSection() {
       id: 1,
       text: "How do I Upload my Property?",
       answer:
-        "Our associate consultants specialize in a range of business areas. These include strategic planning, issues resolution, culture assessment, board effectiveness, retention.",
+        "Upload your property easily with our intuitive platform. Simply provide details, images, and features to showcase your listing effortlessly.",
     },
     {
       id: 2,
       text: "Which documents I need to get ready to initiate?",
       answer:
-        "We offer our consulting services globally, covering a diverse range of countries and regions.",
+        "Prepare ID, proof of ownership, utility bills, and financial records to smoothly initiate the process of property transaction or mortgage.",
     },
     {
       id: 3,
       text: "Can I connect with homeowners before confirming a swap?",
       answer:
-        "The consulting process begins with an initial assessment, followed by strategic planning and organization. Our team ensures a comprehensive and organized approach to meet your specific needs.",
+        "Connect with homeowners before swapping to discuss details, preferences, and ensure a successful and satisfying exchange.",
     },
   ];
 
