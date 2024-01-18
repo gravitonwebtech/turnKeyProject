@@ -240,7 +240,7 @@ export default function SocialNetwork() {
                 </div>
               </div>
 
-              <div className="md:col-span-8">
+              <div className="md:col-span-8 hidden md:block">
                 <div className="bg-[#DCDCDC] px-5 py-2">
                   <div className="grid grid-cols-2 md:grid-cols-12 gap-5">
                     <div className="md:col-span-8">

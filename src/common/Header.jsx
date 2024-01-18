@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 
 export default function Header() {
   const location1 = useLocation();
-  const flag = location1?.pathname?.includes("/RegisterLogin");
+  const flag = location1.pathname.includes("/RegisterLogin") || location1.pathname.includes("/Whatsapp")|| location1.pathname.includes("/UserDashboard");
 
   if (flag) {
     return <></>;

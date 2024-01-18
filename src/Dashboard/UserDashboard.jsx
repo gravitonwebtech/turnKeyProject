@@ -52,7 +52,7 @@ export default function UserDashboard() {
             <div className="relative">
               <button
                 onClick={handleDrawerIconClick}
-                className="fixed top-0 right-0 m-4 p-2 text-white bg-gray-800 rounded-full"
+                className="fixed top-16 right-0 m-4 p-2 text-white bg-gray-800 rounded-full z-50"
               >
                 Open Drawer
               </button>

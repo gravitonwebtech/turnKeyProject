@@ -8,7 +8,7 @@ import AppleIcon from "../Images/Appleicon.png";
 
 export default function Footer() {
   const location = useLocation();
-  const flag = location?.pathname?.includes("/RegisterLogin");
+  const flag = location.pathname.includes("/RegisterLogin") || location.pathname.includes("/Whatsapp")|| location.pathname.includes("/UserDashboard");
 
   if (flag) {
     return <></>;

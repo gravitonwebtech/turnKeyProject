@@ -42,7 +42,7 @@ const NavigationBar = () => {
 
   // hide navbar in register page
   const location1 = useLocation();
-  const flag = location1?.pathname?.includes("/RegisterLogin");
+  const flag = location.pathname.includes("/RegisterLogin") || location.pathname.includes("/UserDashboard");
 
   if (flag) {
     return <></>;

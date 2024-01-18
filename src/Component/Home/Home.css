@@ -33,6 +33,6 @@
 
 @media only screen and (max-width: 768px) {
   .home-six-section {
-    height: auto;
+    height:90vh;
   }
 }
