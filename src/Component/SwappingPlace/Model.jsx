@@ -361,7 +361,7 @@ export default function Model({ onClose }) {
                     <label className="flex items-center">
                       <input
                         type="checkbox"
-                        className={`w-5 h-5 border border-gray-300 rounded-md`}
+                        className={`w-5 h-5 border border-gray-300 rounded-md checkbox-input`}
                       />
                       <span className="ml-3 text-sm font-medium">{checkbox1.label}</span>
                     </label>

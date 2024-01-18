@@ -11,21 +11,67 @@ export default function Login(props) {
     password: "",
   });
 
+  const [errors, setErrors] = useState({
+    email: "",
+    password: "",
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
+
+    // Clear validation errors when user starts typing
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: "",
+    }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    // Simple validation
+    if (!formData.email.trim()) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        email: "Email is required",
+      }));
+      return;
+    }
+
+    // Complex password validation
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    if (!formData.password.trim()) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        password: "Password is required",
+      }));
+      return;
+    } else if (!passwordRegex.test(formData.password.trim())) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        password:
+          "Password must be at least 8 characters at least one uppercase letter, one lowercase letter, one special character, and one number.",
+      }));
+      return;
+    }
+
     // Log the entire form data object to the console
     console.log("Form Data:", formData);
 
+    // Reset form data
     setFormData({
+      email: "",
+      password: "",
+    });
+
+    // Clear validation errors
+    setErrors({
       email: "",
       password: "",
     });
@@ -53,20 +99,30 @@ export default function Login(props) {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="border-b-2 border-[#8D8D8D] w-full focus:outline-none mb-4 mt-2"
+                    className={`border-b-2 border-[#8D8D8D] w-full focus:outline-none mt-2 ${
+                      errors.email ? "border-red-500" : ""
+                    }`}
                   />
                 </p>
+                {errors.email && (
+                  <p className="text-red-500 text-xs mt-2">{errors.email}</p>
+                )}
 
-                <label className="text-sm">Password</label>
+                <label className="text-sm mt-4">Password</label>
                 <p>
                   <input
                     type="password"
                     name="password"
                     value={formData.password}
                     onChange={handleChange}
-                    className="border-b-2 border-[#8D8D8D] w-full focus:outline-none mt-2"
+                    className={`border-b-2 border-[#8D8D8D] w-full focus:outline-none mt-2 ${
+                      errors.password ? "border-red-500" : ""
+                    }`}
                   />
                 </p>
+                {errors.password && (
+                  <p className="text-red-500 text-xs mt-2">{errors.password}</p>
+                )}
 
                 <div className="mt-5 md:mt-8">
                   <button

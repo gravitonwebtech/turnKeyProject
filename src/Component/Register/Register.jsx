@@ -11,26 +11,98 @@ export default function Register(props) {
     password: "",
   });
 
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
+
+    // Clear validation errors when the user starts typing
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: "",
+    }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    // Simple validation for name
+    if (!formData.name.trim()) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        name: "Name is required",
+      }));
+      return;
+    }
+
+    // Simple validation for email
+    if (!formData.email.trim()) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        email: "Email is required",
+      }));
+      return;
+    } else {
+      const emailRegex =
+        // eslint-disable-next-line no-useless-escape
+        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      if (!emailRegex.test(formData.email.trim())) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          email: "Invalid email address",
+        }));
+        return;
+      }
+    }
+
+    // Complex password validation
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    if (!formData.password.trim()) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        password: "Password is required",
+      }));
+      return;
+    } else if (!passwordRegex.test(formData.password.trim())) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        password:
+          "Password must be at least 8 characters at least one uppercase letter, one lowercase letter, one special character, and one number.",
+      }));
+      return;
+    }
+
     // Log the entire form data object to the console
     console.log("Form Data:", formData);
 
+    // Assuming registration is successful, call the onRegisterSuccess callback
+    props.onRegisterSuccess();
+
+    // Reset form data
     setFormData({
       name: "",
       email: "",
       password: "",
     });
+
+    // Clear validation errors
+    setErrors({
+      name: "",
+      email: "",
+      password: "",
+    });
   };
+
   return (
     <>
       <div className="register-background">
@@ -75,22 +147,28 @@ export default function Register(props) {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="border-b-2 border-[#8D8D8D] w-full focus:outline-none mb-4 mt-2"
+                      className="border-b-2 border-[#8D8D8D] w-full focus:outline-none mt-2"
                     />
                   </p>
+                  {errors.name && (
+                    <p className="text-red-500 text-xs mt-2">{errors.name}</p>
+                  )}
 
-                  <label className="text-sm">Email</label>
+                  <label className="text-sm mt-4">Email</label>
                   <p>
                     <input
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="border-b-2 border-[#8D8D8D] w-full focus:outline-none mb-4 mt-2"
+                      className="border-b-2 border-[#8D8D8D] w-full focus:outline-none mt-2"
                     />
                   </p>
+                  {errors.email && (
+                    <p className="text-red-500 text-xs mt-2">{errors.email}</p>
+                  )}
 
-                  <label className="text-sm">Password</label>
+                  <label className="text-sm mt-4">Password</label>
                   <p>
                     <input
                       type="password"
@@ -100,6 +178,12 @@ export default function Register(props) {
                       className="border-b-2 border-[#8D8D8D] w-full focus:outline-none mt-2"
                     />
                   </p>
+                  {errors.password && (
+                    <p className="text-red-500 text-xs mt-2">
+                      {errors.password}
+                    </p>
+                  )}
+
                   <div className="mt-5 md:mt-8">
                     <button
                       type="submit"
