@@ -47,18 +47,18 @@ export default function UserDashboard() {
   return (
     <>
       <div className="bg-[#DCFFEC] p-3">
-        <div className="block md:hidden">
+        <div className="block xl:hidden">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:mx-10">
             <div className="relative">
               <button
                 onClick={handleDrawerIconClick}
-                className="fixed top-16 right-0 m-4 p-2 text-white bg-gray-800 rounded-full z-50"
+                className="fixed top-0 right-0 m-4 p-2 text-white bg-gray-800 rounded-full z-50"
               >
                 Open Drawer
               </button>
 
               {isDrawerOpen && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
+                <div className="fixed inset-0 z-50">
                   <div className="w-full bg-white fixed right-0 h-full overflow-y-auto p-8 ">
                     <div className="md:col-span-2 border-2 p-3 rounded-[14px] bg-white shadow">
                       <div
@@ -67,7 +67,7 @@ export default function UserDashboard() {
                       >
                         <h1>Close Drawer</h1>
                       </div>
-                      <div className="flex justify-center">
+                      <div className="">
                         <input
                           type="file"
                           accept="image/*"
@@ -98,7 +98,7 @@ export default function UserDashboard() {
                         </label>
                       </div>
 
-                      <h1 className="font-bold text-[#09A350] text-center text-lg mt-2">
+                      <h1 className="font-bold text-[#09A350] text-lg mt-2 pl-3 ">
                         Hello Lucia
                       </h1>
 
@@ -225,7 +225,7 @@ export default function UserDashboard() {
               )}
             </div>
 
-            <div className="md:col-span-10 mt-10 md:mt-0">
+            <div className="md:col-span-12 mt-10 md:mt-0">
               {selectedSection === 1 && <PersonalInfo />}
               {selectedSection === 2 && <ConfidentialInfo />}
               {selectedSection === 3 && <SocialNetwork />}
@@ -233,9 +233,9 @@ export default function UserDashboard() {
           </div>
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden xl:block">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:mx-10">
-            <div className="md:col-span-2 border-2 p-3 rounded-[14px] bg-white shadow">
+            <div className="relative md:col-span-2 border-2 p-3 rounded-[14px] bg-white shadow">
               <div className="flex justify-center">
                 <input
                   type="file"
@@ -348,7 +348,7 @@ export default function UserDashboard() {
                 </div>
               </div>
 
-              <div className="flex mt-5 md:mt-[150px] ">
+              <div className="flex pl-5 absolute bottom-5 left-0 right-0 ">
                 <div>
                   <img src={Logout} alt="image" className="mt-1" />
                 </div>

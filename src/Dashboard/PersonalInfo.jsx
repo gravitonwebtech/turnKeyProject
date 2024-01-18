@@ -235,169 +235,55 @@ export default function PersonalInfo() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-5 mt-3">
-        <div className="md:col-span-5">
-          <div className="border-2 rounded-[14px] bg-white shadow-xl">
-            <h1 className="text-[#09A350] px-5 md:px-8 py-2 font-medium text-base">
-              {" "}
-              Recent Listing
-            </h1>
-            <div className="w-full border mb-3" />
+      <div className="border-2 rounded-[14px] bg-white shadow-xl mt-4">
+        <h1 className="text-[#09A350] px-5 md:px-8 py-2 font-medium text-base">
+          {" "}
+          Recent Listing
+        </h1>
+        <div className="w-full border mb-3" />
 
-            <div className="border rounded p-3 mx-5 md:mx-8 mt-5">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
-                <div className="md:col-span-4">
-                  <img src={Image1}></img>
-                </div>
-                <div className="md:col-span-8">
-                  <h1 className="text-base font-semibold">
-                    Single Floor Farm House
-                  </h1>
-                  <p className="text-sm text-[#858585]">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Magni, cum?
-                  </p>
-                </div>
-              </div>
+        <div className="border rounded p-3 mx-5 md:mx-8 mt-5">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
+            <div className="md:col-span-2">
+              <img src={Image1}></img>
             </div>
-
-            <div className="border rounded p-3 mx-5 md:mx-8 mt-2">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
-                <div className="md:col-span-4">
-                  <img src={Image1}></img>
-                </div>
-                <div className="md:col-span-8">
-                  <h1 className="text-base font-semibold">
-                    Single Floor Farm House
-                  </h1>
-                  <p className="text-sm text-[#858585]">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Magni, cum?
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-4 mb-2">
-              <h1 className="text-[#09A350] text-center text-base font-semibold">
-                View More
+            <div className="md:col-span-10">
+              <h1 className="text-base font-semibold">
+                Single Floor Farm House
               </h1>
+              <p className="text-sm text-[#858585]">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque,
+                sunt molestias esse libero nesciunt deleniti assumenda,
+                architecto dignissimos inventore totam quis. Iste molestiae
+                maiores asperiores eius. Architecto rerum ad sequi.
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="md:col-span-7">
-          <div className="border-2 rounded-[14px] bg-white shadow-xl h-full">
-            <h1 className="text-[#09A350] px-5 md:px-8 py-2 font-medium text-base">
-              My Contacts
-            </h1>
-            <div className="w-full border"></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-12">
-              <div className="md:col-span-4 border-r border-gray-400">
-                <div className="flex bg-[#C1FFDE] px-5 py-2 font-semibold">
-                  <div>
-                    <img src={ContactImg} alt="image" />
-                  </div>
-                  <div className="pl-3 ">
-                    <h1>Morang Helsinki</h1>
-                  </div>
-                </div>
-                <div className="flex px-5 py-2 font-semibold ">
-                  <div>
-                    <img src={ContactImg} alt="image" />{" "}
-                  </div>
-                  <div className="pl-3 ">
-                    <h1>Mohjang</h1>
-                  </div>
-                </div>
-                <div className="flex px-5 py-2 font-semibold ">
-                  <div>
-                    <img src={ContactImg} alt="image" />
-                  </div>
-                  <div className="pl-3 ">
-                    <h1>Jason</h1>
-                  </div>
-                </div>
-                <div className="flex px-5 py-2 font-semibold ">
-                  <div>
-                    <img src={ContactImg} alt="image" />
-                  </div>
-                  <div className="pl-3 ">
-                    <h1>Lucia</h1>
-                  </div>
-                </div>
-                <div className="flex px-5 py-2 font-semibold ">
-                  <div>
-                    <img src={ContactImg} alt="image" />
-                  </div>
-                  <div className="pl-3 ">
-                    <h1>Morang Helsinki</h1>
-                  </div>
-                </div>
-              </div>
-
-              <div className="md:col-span-8 hidden md:block">
-                <div className="bg-[#DCDCDC] px-5 py-2">
-                  <div className="grid grid-cols-2 md:grid-cols-12 gap-5">
-                    <div className="md:col-span-8">
-                      <div className="flex font-semibold ">
-                        <div>
-                          <img src={ContactImg} alt="image" />
-                        </div>
-                        <div className="pl-3 ">
-                          <h1>Morang Helsinki</h1>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="md:col-span-4 mt-2">
-                      <div className="flex justify-center">
-                        <FontAwesomeIcon
-                          icon={faPhone}
-                          className="text-[#09A350]"
-                        />
-                        <FontAwesomeIcon
-                          icon={faVideo}
-                          className="ml-3 text-[#09A350]"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex justify-center">
-                  <h1 className="text-base font-semibold bg-[#F2F4F7] rounded-[32px] px-3 py-1">
-                    Today
-                  </h1>
-                </div>
-                <div className="mt-4 min-h-[200px]">
-                  <p className="bg-[#09A350] text-white text-sm md:w-3/4 p-2 mx-5 mt-5 rounded-tr rounded-br rounded-bl">
-                    Hi, welcome
-                  </p>
-                  <p className="bg-[#036825] text-white text-sm md:w-3/4 ml-20 mr-2 p-2 mt-4 rounded-tl rounded-br rounded-bl">
-                    Hello
-                  </p>
-                </div>
-
-                <div className="bg-[#DCDCDC] px-3 py-2 rounded-br-[14px] flex items-center">
-                  <FontAwesomeIcon
-                    icon={faFaceSmile}
-                    className="text-[#09A350]"
-                  />
-                  <FontAwesomeIcon
-                    icon={faLink}
-                    className="text-[#09A350] pl-5"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Type your message here"
-                    className="border border-gray-500 rounded-lg w-full px-3 mx-3"
-                  />
-
-                  <MdSend className="bg-[#09A350] p-1 rounded-lg text-white text-2xl" />
-                </div>
-              </div>
+        <div className="border rounded p-3 mx-5 md:mx-8 mt-2">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
+            <div className="md:col-span-2">
+              <img src={Image1}></img>
+            </div>
+            <div className="md:col-span-10">
+              <h1 className="text-base font-semibold">
+                Single Floor Farm House
+              </h1>
+              <p className="text-sm text-[#858585]">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Provident cumque nisi autem explicabo. Minus voluptatum veniam
+                in cupiditate et! Repellat, aspernatur labore porro dolores aut
+                debitis tempora eius minus distinctio!
+              </p>
             </div>
           </div>
+        </div>
+
+        <div className="mt-4 mb-2">
+          <h1 className="text-[#09A350] text-center text-base font-semibold">
+            View More
+          </h1>
         </div>
       </div>
     </>
