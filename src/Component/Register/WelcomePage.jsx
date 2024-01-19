@@ -5,8 +5,8 @@ import WelcomeImg from "./RegisterImgs/Welcome.png";
 export default function WelcomePage() {
   return (
     <>
-      <div className="register-background">
-        <div className="px-5 md:px-5 lg:px-16 xl:px-96 py-14 sm:py-10 md:py-12 lg:py-20">
+      <div className="register-background md:flex md:items-center md:justify-center">
+        <div className="px-5 md:px-5 lg:px-16 xl:px-96 py-16 md:py-0">
           <div className="bg-white p-5" style={{ fontFamily: "Poppins" }}>
             <div className="flex flex-col items-center justify-center">
               <h1 className="text-xl font-semibold">Welcome to</h1>

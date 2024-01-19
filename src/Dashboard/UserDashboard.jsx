@@ -52,9 +52,9 @@ export default function UserDashboard() {
             <div className="relative">
               <button
                 onClick={handleDrawerIconClick}
-                className="fixed top-0 right-0 m-4 p-2 text-white bg-gray-800 rounded-full z-50"
+                className="fixed top-0 right-0 m-4 p-2 text-white bg-[#09A350] rounded-full z-50"
               >
-                Open Drawer
+                Sidebar
               </button>
 
               {isDrawerOpen && (
@@ -65,7 +65,7 @@ export default function UserDashboard() {
                         onClick={handleCloseDrawer}
                         className="pl-3 font-medium text-[#F13E3E] cursor-pointer flex justify-end"
                       >
-                        <h1>Close Drawer</h1>
+                        <h1>Close</h1>
                       </div>
                       <div className="">
                         <input

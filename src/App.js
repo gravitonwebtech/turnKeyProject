@@ -9,6 +9,7 @@ import Notification from "./Component/Notification/Notification";
 import RegisterLogin from "./Component/Register/RegisterLogin";
 import UserDashboard from "./Dashboard/UserDashboard";
 import Whatsapp from "./Whatsapp";
+import AddListing from "./Component/AddListing/AddListing";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route index path="/RegisterLogin" element={<RegisterLogin />} />
           <Route index path="/UserDashboard" element={<UserDashboard />} />
           <Route index path="/Whatsapp" element={<Whatsapp />} />
+          <Route index path="/AddListing" element={<AddListing />} />
         </Routes>
 
         <Footer />

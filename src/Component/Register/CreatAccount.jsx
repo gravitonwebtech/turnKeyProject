@@ -35,8 +35,8 @@ export default function CreatAccount(props) {
 
   return (
     <>
-      <div className="register-background">
-        <div className="grid grid-cols-1 md:grid-cols-12 px-5 md:px-5 lg:px-16 xl:px-56 py-14 sm:py-20 md:py-12 lg:py-14">
+      <div className="register-background md:flex md:items-center md:justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-12 px-5 md:px-5 lg:px-16 xl:px-56 py-16 md:py-0">
           <div className="md:col-span-7 hidden md:block relative">
             <div className="relative h-full">
               <img src={Image1} alt="" className="h-full object-cover" />
