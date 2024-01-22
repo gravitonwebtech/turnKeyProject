@@ -5,11 +5,11 @@
   }
   
   .events::-webkit-scrollbar {
-    width: 5px;
+    width: 5px !important;
   }
   
   .events::-webkit-scrollbar-thumb {
-    background-color: #dad7d7;
+    background-color: #bab7b7;
     cursor: pointer;
   }
   

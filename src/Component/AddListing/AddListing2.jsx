@@ -186,7 +186,7 @@ export default function AddListing2({ onNextStep }) {
         <div className="absolute left-0 w-[50%] h-full bg-green-500"></div>
       </div>
 
-      <div className="grid grid-cols-2 gap-5 px-5 sm:px-10 md:px-14 lg:px-20 xl:px-24 mt-3">
+      <div className="grid grid-cols-2 gap-5 px-5 sm:px-10 md:px-14 lg:px-20 xl:px-24 mt-3" style={{ fontFamily: "Poppins" }}>
         <div className="text-sm font-semibold">Step 2/4</div>
         <div className="flex  justify-end">
           <div className="">

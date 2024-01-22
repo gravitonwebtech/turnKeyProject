@@ -82,11 +82,12 @@ export default function Model({ onClose }) {
 
   return (
     <>
-      <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center">
+      <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
         <div
           ref={modalRef}
-          className="bg-white shadow-lg border-2 border-gray-200 rounded-[14px] w-[400px] md:w-[600px] mx-5 md:mx-0 py-3"
+          className="bg-white shadow-lg border-2 border-gray-200 rounded-[14px] w-[400px] md:w-[600px] mx-auto py-3 mx-3 md:mx-0"
         >
+          <div className="events">
           <div className="flex px-5">
             <div className="">
               <button
@@ -105,7 +106,7 @@ export default function Model({ onClose }) {
 
           <div className="border-b border-black my-4"></div>
 
-          <div className="events">
+        
             <div className="px-5">
               <h1 className="font-semibold">Type of Place</h1>
               <p className="mt-2 text-sm text-[#A0A0A0] font-regular">
@@ -268,7 +269,9 @@ export default function Model({ onClose }) {
                         type="checkbox"
                         className={`w-5 h-5 border border-gray-300 rounded-md checkbox-input`}
                       />
-                      <span className="ml-2 text-sm font-medium">{checkbox.label}</span>
+                      <span className="ml-2 text-sm font-medium">
+                        {checkbox.label}
+                      </span>
                     </label>
                   </div>
                 ))}
@@ -311,44 +314,42 @@ export default function Model({ onClose }) {
 
             <div className="border-b border-gray-300 my-5"></div>
 
-
             <div className="px-5">
               <h1 className="font-semibold">Ambience</h1>
 
-               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-5 mt-5">
-                 <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-5 mt-5">
+                <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
                   <h1 className=" text-sm">Restaurant</h1>
-                 </div>
+                </div>
 
-                 <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
+                <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
                   <h1 className=" text-sm">Library</h1>
-                 </div>
+                </div>
 
-                 <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
+                <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
                   <h1 className=" text-sm">Meeting area</h1>
-                 </div>
+                </div>
 
-                 <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
+                <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
                   <h1 className=" text-sm">Theatre</h1>
-                 </div>
+                </div>
 
-                 <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
+                <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
                   <h1 className=" text-sm">Club House</h1>
-                 </div>
+                </div>
 
-                 <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
+                <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
                   <h1 className=" text-sm">Terrace</h1>
-                 </div>
+                </div>
 
-                 <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
+                <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
                   <h1 className=" text-sm">Arcade area</h1>
-                 </div>
+                </div>
 
-                 <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
+                <div className="border border-gray-300 rounded px-3 py-2 text-[#A0A0A0] cursor-pointer hover:border-black hover:text-black hover:font-semibold">
                   <h1 className=" text-sm">Cafeteria</h1>
-                 </div>
-
-               </div>
+                </div>
+              </div>
             </div>
 
             <div className="border-b border-gray-300 my-5"></div>
@@ -363,7 +364,9 @@ export default function Model({ onClose }) {
                         type="checkbox"
                         className={`w-5 h-5 border border-gray-300 rounded-md checkbox-input`}
                       />
-                      <span className="ml-3 text-sm font-medium">{checkbox1.label}</span>
+                      <span className="ml-3 text-sm font-medium">
+                        {checkbox1.label}
+                      </span>
                     </label>
                   </div>
                 ))}
@@ -381,11 +384,10 @@ export default function Model({ onClose }) {
               </div>
              </div>
             </div>
-
-             
+          </div>
           </div>
         </div>
-      </div>
+    
     </>
   );
 }

@@ -96,7 +96,7 @@ export default function AddListing3({onNextStep}) {
                 </div>
 
                 <label className="font-semibold mt-3">Ownership</label>
-                <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 mt-2">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 mt-2">
                   {checkboxes1.map((checkbox1, index) => (
                     <div
                       key={checkbox1.label}
@@ -125,12 +125,12 @@ export default function AddListing3({onNextStep}) {
         <div className="absolute left-0 w-[75%] h-full bg-green-500"></div>
       </div>
 
-      <div className="grid grid-cols-2 gap-5 px-5 sm:px-10 md:px-14 lg:px-20 xl:px-24 mt-3">
+      <div className="grid grid-cols-2 gap-5 px-5 sm:px-10 md:px-14 lg:px-20 xl:px-24 mt-3" style={{ fontFamily: "Poppins" }}>
         <div className="text-sm font-semibold">Step 3/4</div>
         <div className="flex  justify-end">
           <div className="">
           <button
-              className="text-white bg-[#09A350] px-5 py-1 rounded-[4px] ml-4"
+              className="text-white bg-[#09A350] px-5 py-1 rounded-[4px]"
               onClick={onNextStep}
             >
               Next
