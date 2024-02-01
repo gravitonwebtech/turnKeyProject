@@ -7,7 +7,6 @@ import Star1 from "../HomeImgs/Star.svg";
 import Star2 from "../HomeImgs/Star1.svg";
 import Star3 from "../HomeImgs/Star3.svg";
 
-
 export default function FiveSection() {
   const Settings1 = {
     dots: false,
@@ -25,6 +24,7 @@ export default function FiveSection() {
   if (isSmallScreen1) {
     Settings1.slidesToShow = 1;
   }
+
   return (
     <>
       <div className="mt-10 md:mt-14 " style={{ fontFamily: "Poppins" }}>
